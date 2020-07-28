@@ -14,12 +14,12 @@ using std::vector;
 
 Process::Process(int pid):  pid_(pid) {}
 
-// TODO: Return this process's ID
+
 // Neeed to change Process::Pid() and Process::CpuUtilization() to const so
 // the comparion operator runs.
 int Process::Pid() const { return pid_; }
 
-// TODO: Return this process's CPU utilization
+
 // following https://stackoverflow.com/questions/16726779/how-do-i-get-the-total-cpu-usage-of-an-application-from-proc-pid-stat/16736599#16736599
 // with slight adjustment
 float Process::CpuUtilization() const 
@@ -32,23 +32,23 @@ float Process::CpuUtilization() const
   float cpu_usage = total_time/seconds;
   
   
-  return 100*cpu_usage;
+  return 100 * cpu_usage;
 }
 
-// TODO: Return the command that generated this process
+
 string Process::Command() { return LinuxParser::Command(Process::Pid()); }
 
-// TODO: Return this process's memory utilization
+
 string Process::Ram()  { return LinuxParser::Ram(Process::Pid()); }
 
-// TODO: Return the user (name) that generated this process
+ 
 string Process::User() { return LinuxParser::User(Process::Pid()); }
 
-// TODO: Return the age of this process (in seconds); 
+ 
 long int Process::UpTime() { return LinuxParser::UpTime(Process::Pid()); }
 
-// TODO: Overload the "less than" comparison operator for Process objects
-// REMOVE: [[maybe_unused]] once you define the function
+ 
+ 
 //sort processes by the most active
 bool Process::operator<(Process const& a) const
 { 
