@@ -3,7 +3,7 @@
 #include<iostream>
 #include "processor.h"
 #include "linux_parser.h"
-// TODO: Return the aggregate CPU utilization
+ 
 float Processor::Utilization() 
 {
   //(float) (LinuxParser::Jiffies() - LinuxParser::IdleJiffies())/(LinuxParser::Jiffies());
