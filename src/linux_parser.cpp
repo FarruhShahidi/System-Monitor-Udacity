@@ -146,7 +146,7 @@ Once CpuUtilization() is determined, we can extract
 the number of idle,active and total jiffies according to
 https://stackoverflow.com/questions/23367857/accurate-calculation-of-cpu-usage-given-in-percentage-in-linux
 */
-// TODO: Read and return the number of active jiffies for the system
+
 long LinuxParser::ActiveJiffies()
 {
   long ans = 0;
@@ -162,7 +162,7 @@ long LinuxParser::ActiveJiffies()
   return ans;
 }
 
-// TODO: Read and return the number of idle jiffies for the system
+ 
 long LinuxParser::IdleJiffies() {
   long ans = 0;
   vector<string> cpu_util = CpuUtilization();
@@ -173,8 +173,7 @@ long LinuxParser::IdleJiffies() {
   }
   return ans; }
 
-
-// TODO: Read and return the number of jiffies for the system
+ 
 long LinuxParser::Jiffies() 
 {
   return ActiveJiffies() + IdleJiffies(); 
