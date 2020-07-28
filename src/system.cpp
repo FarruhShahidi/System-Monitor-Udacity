@@ -15,15 +15,15 @@ using std::string;
 using std::vector;
 
 // TODO: Return the system's CPU .....
-Processor& System::Cpu()
-{
-
+Processor& System::Cpu() 
+{ 
+  
   return cpu_;
 }
 
 // TODO: Return a container composed of the system's processes
-vector<Process>& System::Processes()
-{
+vector<Process>& System::Processes() 
+{ 
   vector<int> pids = LinuxParser::Pids();
   // to avoid comparing types of different signedness
   for (long unsigned int i = 0; i < pids.size(); i++)
